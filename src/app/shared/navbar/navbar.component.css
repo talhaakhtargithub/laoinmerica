@@ -1,0 +1,110 @@
+/* Custom spacing for navbar items */
+.custom-margin {
+  margin-right: 60px !important;
+  /* Adds more space between the items */
+}
+
+.nav-link.active {
+  font-weight: bold;
+  color: #5AA339
+}
+
+.custom-margin:last-child {
+  margin-right: 0 !important;
+  /* Removes margin from the last item */
+}
+
+/* Gradient background */
+.gradient {
+  background: linear-gradient(to right, #FFFFFF, #FFEFCC);
+
+}
+
+.nav-link {
+  padding: 10px;
+}
+
+/* Dropdown styling */
+.navbar-nav .dropdown-menu {
+  background-color: #FFFFFF;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-nav .dropdown-item {
+  color: #333;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-nav .dropdown-item:hover {
+  background-color: #FFEFCC;
+  color: #5AA339;
+}
+
+/* Styling for contact button */
+.button1 {
+  width: 152px;
+
+  padding: 5px 20px;
+  border: 2px solid #5AA339;
+  border-radius: 24px;
+  background-color: #5AA339;
+  color: white !important;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  margin-right: 60px !important;
+}
+
+.button1:hover {
+  color: #5AA339 !important;
+  background-color: white !important;
+}
+
+
+
+a {
+  font-family: Outfit;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: black !important;
+
+
+}
+
+
+
+@media (max-width: 768px) {
+  .navbar-nav {
+    margin-left: 10px !important;
+    /* Adjust the value as needed */
+  }
+
+
+
+  .button1 {
+    margin-right: 20px !important;
+    /* Adjust button spacing */
+  }
+
+  .navbar-nav .dropdown-menu {
+    background-color: #f1e7d3;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 0;
+    padding: 5px;
+  }
+
+  .nav-link {
+    padding: 5px;
+  }
+}
+
+.button1 {
+  transform: scale(0.95);
+  color: white !important;
+
+}

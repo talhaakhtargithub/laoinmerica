@@ -1,0 +1,24 @@
+<div class="faq-container p-5">
+  <!-- Add background images container here -->
+  <div class="background-images">
+    <img src="assets/flowerbg1.webp" class="top-right-bg" alt="decorative background">
+    <img src="assets/flowerbg2.webp" class="bottom-left-bg" alt="decorative background">
+  </div>
+  
+  <h2 class="faq-title">Frequently Asked </h2>
+  <h2 class="faq-title"><span class="highlight">Questions</span></h2>
+
+  <div class="row">
+    <div class="col-md-6" *ngFor="let column of faqColumns">
+      <div class="question-card" (click)="toggleAnswer(question)" *ngFor="let question of column">
+        <div class="question-header d-flex justify-content-between align-items-center">
+          <span>{{ question.question }}</span>
+          <img src="assets/plus.webp" [class.rotated]="question.showAnswer" class="icon">
+        </div>
+        <div class="answer-body" *ngIf="question.showAnswer">
+          <p>{{ question.answer }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

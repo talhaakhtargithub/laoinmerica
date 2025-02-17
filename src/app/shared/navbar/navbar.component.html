@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg gradient">
+  <a class="navbar-brand" routerLink="/">
+    <img src="assets/logo.webp" alt="Logo" style="width: 190px; height: auto;">
+  </a>
+
+  <!-- Navbar toggler for mobile view -->
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse ml-2" id="navbarNav">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item custom-margin">
+        <a class="nav-link" routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+      </li>
+      <li class="nav-item custom-margin">
+        <a class="nav-link" routerLink="/aboutus" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Lao in America</a>
+      </li>
+
+      <!-- Dropdown for Products -->
+      <li class="nav-item dropdown custom-margin">
+        <a class="nav-link dropdown-toggle" routerLink="/products" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Products
+        </a>
+        <ul class="dropdown-menu"  aria-labelledby="productsDropdown">
+          <li><a class="dropdown-item" routerLink="/product1">Sugar Cane Molasses</a></li>
+          <li><a class="dropdown-item" routerLink="/product2">Roasted Rice with Spices</a></li>
+        </ul>
+      </li>
+
+      <!-- Dropdown for Questions -->
+      <li class="nav-item dropdown custom-margin">
+        <a class="nav-link dropdown-toggle" href="#" id="questionsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Questions?
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="questionsDropdown">
+          <li><a class="dropdown-item" routerLink="/questions">General Questions</a></li>
+          <li><a class="dropdown-item" routerLink="/refund">Refund</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item custom-margin">
+        <a class="nav-link button1" routerLink="/contacts" routerLinkActive="active">
+          Contact Us
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

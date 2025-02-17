@@ -1,0 +1,82 @@
+.custom-row {
+    height: 411px;
+    width: 100vw;
+    margin: 0;
+    padding-left: 1%;
+}
+
+.container-fluid {
+    background: linear-gradient(109.6deg, #FFFFFF 0%, #FFEFCC 109.22%);
+}
+
+h1 {
+    width: 90%;
+    max-width: 470px;
+    font-family: Outfit, sans-serif;
+    font-size: 3.8vw;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.05em;
+    color: #1C1C1C;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+
+.shop-button {
+    font-family: Outfit, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    width: 204px;
+    padding: 12px 24px;
+    border: 2px solid #5AA339;
+    border-radius: 50px;
+    background-color: #5AA339;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-left: 10px;
+}
+
+.shop-button:hover {
+    background-color: white;
+    color: #5AA339;
+    transform: scale(1.05);
+}
+
+.col-md-6{
+    left: 48px !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .custom-row {
+        height: auto;
+        padding: 30px 5%; /* Add padding to the row for spacing */
+    }
+
+    h1 {
+        font-size: 6vw;
+        padding-left: 0;
+    }
+
+    .shop-button {
+        font-size: 16px;
+        padding: 10px 20px;
+        margin-left: 0;
+    }
+
+    /* Ensure the columns have space between them */
+    .col-md-6 {
+        
+        padding: 0 10px; /* Add space between columns */
+    }
+
+    /* Ensure the image is pushed to the right in tablet mode */
+    .right-image {
+        max-width: 100%;
+        height: auto;
+        margin-left: auto; /* Push image to the right */
+        display: block;
+    }
+}

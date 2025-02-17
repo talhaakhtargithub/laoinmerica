@@ -1,0 +1,40 @@
+<div class="faq-container p-5" id="nextSection">
+  <!-- Background Images -->
+  <div class="background-images">
+    <img src="assets/flowerbg1.webp" class="top-right-bg" alt="decorative background">
+    <img src="assets/flowerbg2.webp" class="bottom-left-bg" alt="decorative background">
+  </div>
+
+  <!-- Section Heading -->
+  <h2 class="faq-title" data-aos="fade-right">Know About Us</h2>
+  <h2 class="faq-title" data-aos="fade-left">From <span class="highlight">Our Clients</span></h2>
+
+  <div class="row">
+    <!-- Carousel Container -->
+    <div class="carousel" #carousel 
+         (mouseenter)="pauseAutoSlide()" 
+         (mouseleave)="resumeAutoSlide()" 
+         data-aos="zoom-in">
+      
+      <!-- Testimonial Cards -->
+      <div class="quote-card" *ngFor="let quote of quoteList" 
+           [ngStyle]="{'background-color': quote.bgColor}" 
+           data-aos="fade-up">
+        <div class="card-images">
+          <img src="assets/bgcard1.webp" class="top-right-img" alt="decorative">
+          <img src="assets/bgcard.webp" class="bottom-left-img" alt="decorative">
+        </div>
+        <p class="quote-text">{{ quote.text }}</p>
+        <hr class="divider">
+        <br><br>
+        <p class="quote-writer">- {{ quote.writer }}</p>
+      </div>
+    </div>
+
+    <!-- Carousel Controls -->
+    <div class="carousel-controls" data-aos="fade-up">
+      <button class="arrow-btn" (click)="previous()">❮</button>
+      <button class="arrow-btn" (click)="next()">❯</button>
+    </div>
+  </div>
+</div>

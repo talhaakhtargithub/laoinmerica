@@ -1,0 +1,84 @@
+.custom-section {
+    width: 100%;
+    border-radius: 48px 0px 0px 0px;
+    background-color: #FFEFCC;
+    padding: 20px;
+    position: relative;
+    align-items: center;
+  }
+  
+  /* Bold border for input fields */
+  .transparent-input {
+    background-color: transparent;
+    border: 1px solid #000; /* Bold border (2px solid black) */
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+    font-family: Outfit;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+    padding-left: 10px;
+  }
+  
+  label {
+    font-family: Outfit;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 10px;
+    text-align: left;
+  }
+  
+  /* Send Button Styles */
+  .send-button {
+    width: 204px;
+    height: 46px;
+    padding: 10px 20px;
+    border: 2px solid #5AA339;
+    border-radius: 50px;
+    background-color: #5AA339;
+    color: white;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+  }
+  
+  .send-button:hover {
+    background-color: #488C29;
+  }
+  
+  /* Ensure the form is responsive */
+  @media (max-width: 768px) {
+    .custom-section {
+      margin-top: 20px;
+      height: auto;
+    }
+  
+    .col-md-4 {
+      margin-top: 20px;
+    }
+  
+    .col-md-8,
+    .col-md-6,
+    .col-12 {
+      width: 100%;
+      padding: 0 15px;
+    }
+  
+    .row {
+      margin: 0;
+    }
+  
+    .send-button {
+      width: 100%;
+      margin-right: 0 !important;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .send-button {
+      width: 100%;
+      margin-right: 0 !important;
+    }
+  }

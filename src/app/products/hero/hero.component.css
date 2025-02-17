@@ -1,0 +1,211 @@
+.gradient-section {
+    min-height: 70vh;
+    position: relative;
+    background: linear-gradient(to right, #FFFFFF, #FFEFCC);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Background flowers */
+.bg-flower {
+    position: absolute;
+    bottom: 0;
+    z-index: 0;
+    max-width: 15%;
+    height: auto;
+}
+
+.bg-flower.left {
+    left: 0;
+}
+
+.bg-flower.right {
+    right: 0;
+}
+
+.container-fluid {
+    position: relative;
+    z-index: 1;
+    background: none !important;
+    padding: 0;
+}
+
+/* Typography */
+h1 {
+    font-family: Outfit;
+    font-size: 78.41px;
+    font-weight: 400;
+    line-height: 76.9px;
+    letter-spacing: -0.06em;
+    text-align: left;
+    margin: 0;
+}
+
+span {
+    font-family: Caveat;
+    font-size: 86.32px;
+    font-weight: 700;
+    line-height: 76.9px;
+    letter-spacing: -0.06em;
+    color: #FF7D7D;
+}
+
+p {
+    font-family: Outfit;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 44px;
+    margin: 20px 0;
+}
+
+/* Button */
+.shop-button {
+    font-family: Outfit, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    width: 204px;
+    padding: 12px 24px;
+    border: 2px solid #5AA339;
+    border-radius: 50px;
+    background-color: #5AA339;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.shop-button:hover {
+    background-color: white;
+    color: #5AA339;
+    transform: scale(1.05);
+}
+
+/* Layout */
+.custom-row {
+    width: 100%;
+    margin: 0;
+    padding-left: 1%;
+    display: flex;
+    align-items: center;
+}
+
+.col-md-6 {
+    left: 48px;
+}
+
+/* Image containers */
+.image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rotate-image {
+    animation: rotate 15s infinite linear;
+    position: absolute;
+}
+
+.front-image {
+    position: relative;
+    z-index: 10;
+}
+
+.right-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Animations */
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .bg-flower { max-width: 20%; }
+}
+
+@media (max-width: 768px) {
+    .custom-row {
+        flex-direction: column;
+        padding: 30px 5%;
+    }
+
+    h1 {
+        font-size: 6vw;
+        line-height: 1.2;
+    }
+
+    .col-md-6 { left: 0; }
+
+    .shop-button {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .bg-flower { max-width: 25%; }
+
+    .image-container {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 8vw;
+        line-height: 1.1;
+    }
+
+    span { font-size: 72px; }
+
+    p {
+        font-size: 18px;
+        line-height: 32px;
+    }
+
+    .shop-button { font-size: 16px; }
+
+    .bg-flower { max-width: 30%; }
+}
+
+
+
+.bg-flower.blur {
+    position: absolute;
+    width: 20%;
+    opacity: 0.5;
+    animation: float 6s infinite ease-in-out;
+}
+
+.floating1 { top: 10%; left: 15%; animation-delay: 1s; }
+.floating2 { left: 0%;  top:40%; animation-delay: 1.5s; }
+.floating3 { bottom: -1%; left: 30%; animation-delay: 3s; }
+
+@keyframes float {
+    0% { transform: translateY(0px) scale(1); }
+    50% { transform: translateY(-20px) scale(1.2); }
+    100% { transform: translateY(0px) scale(1); }
+}
+
+
+.custom-button {
+    width: 230px;
+    height: 45px;
+    margin-top: 10px;
+    margin-left: 10px;
+    /* Added left margin */
+    border-radius: 60px 60px;
+    background-color: #FFEFCC;
+    font-family: Outfit;
+    /* Add your font family */
+    font-size: 16px;
+    /* Adjust font size as needed */
+    font-weight: 400;
+    /* Adjust font weight as needed */
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+}

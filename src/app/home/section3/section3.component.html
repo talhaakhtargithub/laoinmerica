@@ -1,0 +1,150 @@
+<style>
+  /* Custom Row Styling */
+  .custom-row {
+    padding: 2rem 0;
+  }
+
+  h4 {
+    font-family: Outfit;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 25px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+
+  .life {
+    color: #FF7D7D;
+    font-family: Caveat;
+    font-size: 4rem;
+    display: block;
+    margin-top: 1rem;
+  }
+
+  /* Container Fluid Styling */
+  .container-fluid {
+    background: linear-gradient(109.6deg, #FFFFFF 0%, #FFEFCC 109.22%);
+    padding: 20px; /* Reduced padding for smaller screens */
+  }
+
+  /* Column Styling */
+  .custom-column {
+    background-color: #FFEFCC;
+    border-radius: 24px;
+    padding: 1.5rem; /* Reduced padding for smaller screens */
+    margin: 1rem; /* Reduced margin for smaller screens */
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+  }
+
+  p {
+    font-family: Outfit;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+
+  .custom-column:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  h2 {
+    font-family: Outfit;
+    font-size: 75.96px; /* Fixed size for all screens */
+    font-weight: 700;
+    line-height: 75.96px;
+    letter-spacing: -0.05em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+
+  /* Image Styling */
+  .img-fluid {
+    max-width: 60px;
+    height: auto;
+    margin-right: 1rem;
+    flex-shrink: 0;
+  }
+
+  /* Responsive Media Queries */
+  @media (min-width: 768px) {
+    .container-fluid {
+      padding: 50px; /* Increased padding for larger screens */
+    }
+
+    .custom-column {
+      padding: 2rem; /* Increased padding for larger screens */
+      margin: 1.5rem; /* Increased margin for larger screens */
+    }
+
+    .life {
+      font-size: 4rem;
+      display: inline; /* Show inline on desktop */
+      margin-top: 0;
+    }
+
+    .img-fluid {
+      max-width: 80px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .life {
+      font-size: 5rem;
+    }
+  }
+</style>
+
+<div class="container-fluid" >
+  <div class="row custom-row text-center">
+    <h2>Benefits of Using</h2>
+    <h2>Lao in America <span class="life">Spices</span></h2>
+  </div>
+
+  <div class="row justify-content-center g-4 pt-md-5">
+    <!-- First Column -->
+    <div class="col-12 col-md-6 col-lg-4" data-aos="fade-right">
+      <div class="custom-column text-center">
+        <img src="assets/stamp.webp" alt="Authentic Lao Flavors" class="img-fluid">
+        <div>
+          <h4>Authentic</h4>
+          <h4>Lao Flavors</h4>
+          <p>Enhance your meals with the bold and genuine tastes of traditional Laotian cuisine.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Column -->
+    <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up">
+      <div class="custom-column text-center">
+        <img src="assets/gift.webp" alt="Celebrate Lao Culture" class="img-fluid">
+        <div>
+          <h4>Celebrate</h4>
+          <h4>Lao Culture</h4>
+          <p>Every spice blend reflects the rich heritage and culinary traditions of Laos.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third Column -->
+    <div class="col-12 col-md-6 col-lg-4" data-aos="fade-left">
+      <div class="custom-column text-center">
+        <img src="assets/love.webp" alt="Handcrafted Quality" class="img-fluid">
+        <div>
+          <h4>Handcrafted</h4>
+          <h4>Quality</h4>
+          <p>Certified for quality and safety, ensuring you enjoy every bite with confidence.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

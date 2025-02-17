@@ -1,0 +1,57 @@
+<div class="custom-section">
+  <div class="row">
+      <!-- Form Section -->
+      <div class="col-md-8" data-aos="fade-right">
+          <form id="contactForm" novalidate>
+              <!-- Name & Phone Row -->
+              <div class="row">
+                  <div class="col-md-6 col-12">
+                      <label for="name" class="form-label">Name</label>
+                      <input type="text" class="form-control transparent-input" id="name" placeholder="Enter your name" required>
+                      <div class="invalid-feedback">Please enter your name.</div>
+                  </div>
+                  <div class="col-md-6 col-12">
+                      <label for="phone" class="form-label">Phone</label>
+                      <input type="tel" class="form-control transparent-input" id="phone" placeholder="Enter your phone number" required pattern="^\+?[0-9\s\-]+$">
+                      <div class="invalid-feedback">Please enter a valid phone number.</div>
+                  </div>
+              </div>
+
+              <!-- Email & Subject Row -->
+              <div class="row">
+                  <div class="col-md-6 col-12">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" class="form-control transparent-input" id="email" placeholder="Enter your email" required>
+                      <div class="invalid-feedback">Please enter a valid email address.</div>
+                  </div>
+                  <div class="col-md-6 col-12">
+                      <label for="subject" class="form-label">Subject</label>
+                      <input type="text" class="form-control transparent-input" id="subject" placeholder="Enter the subject" required>
+                      <div class="invalid-feedback">Please enter a subject.</div>
+                  </div>
+              </div>
+
+              <!-- Message Row -->
+              <div class="row">
+                  <div class="col-12">
+                      <label for="message" class="form-label">Message</label>
+                      <textarea class="form-control transparent-input" id="message" rows="4" placeholder="Enter your message" required></textarea>
+                      <div class="invalid-feedback">Please enter your message.</div>
+                  </div>
+              </div>
+
+              <br>
+              <div class="row">
+                  <div class="col-12 text-center">
+                      <button type="submit" class="send-button">Send Message</button>
+                  </div>
+              </div>
+          </form>
+      </div>
+
+      <!-- Image Section -->
+      <div class="col-md-4 col-12 d-flex align-items-center justify-content-center" data-aos="fade-left">
+          <img src="assets/contacts.webp" alt="Contact image" class="img-fluid">
+      </div>
+  </div>
+</div>

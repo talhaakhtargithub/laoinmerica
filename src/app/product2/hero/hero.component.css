@@ -1,0 +1,278 @@
+/* Base Styles */
+.product-container {
+
+    margin: 0 auto;
+    padding: 1rem;
+    background: linear-gradient(to right, #FFFFFF, #FFEFCC);
+  
+  }
+  
+  .faq-content {
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 30px;
+    padding:10px;
+  }
+  
+  /* Image Section */
+  .main-image-container {
+    margin-bottom: 1rem;
+    padding: 17px;
+  }
+  
+  .main-image {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .thumbnail-row {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    width: auto;
+  }
+  
+  .thumbnail {
+    width: 50%;
+    max-width: 270px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .secondary-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* Product Info */
+  .product-info {
+    padding-left: 2rem;
+  }
+  
+  .breadcrumb-btn {
+  
+    background: #FFEFCC;
+    border-radius: 2rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    margin: 1rem 0;
+    cursor: pointer;
+  }
+  
+  .product-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 1.5rem 0;
+  }
+  
+  .price-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .ellipse {
+    width: 15px !important;
+    height: 15px !important;
+  }
+  
+  .price {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  
+  .product-features {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+  }
+  
+  .product-features li {
+    font-size: 1.25rem;
+    margin: 0.75rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    width: 100%;
+    padding: 1rem 2rem;
+    background: #5AA339;
+    color: white;
+    text-align: center;
+    border-radius: 2rem;
+    font-size: 1.25rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background: #47852d;
+    transform: translateY(-2px);
+  }
+  
+  /* FAQ Section */
+  .faq-card {
+    background: #FFEFCC;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .faq-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .toggle-icon {
+    transition: transform 0.3s ease;
+  }
+  
+  p {
+    font-family: Outfit;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -2%;
+  
+  
+  }
+  
+  .rotated {
+    transform: rotate(45deg);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 992px) {
+    .product-info {
+      padding-left: 1rem;
+    }
+  
+    .product-title {
+      font-size: 2.5rem;
+    }
+  
+    .price {
+      font-size: 1.75rem;
+    }
+  
+    .main-image {
+      max-height: 450px;
+    }
+  
+    .thumbnail {
+      width: 50%;
+      max-width: 270px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .container-fluid {
+      padding: 0 1rem;
+    }
+  
+    .row {
+      flex-direction: column;
+    }
+  
+    .col-lg-6 {
+      width: 100%;
+    }
+  
+    .main-image {
+      max-height: 350px;
+    }
+  
+    .thumbnail-row {
+      justify-content: center;
+    }
+  
+    .thumbnail {
+      width: 30%;
+      max-width: 180px;
+    }
+  
+    .secondary-image {
+      max-height: 250px;
+    }
+  
+    .product-title {
+      font-size: 2rem;
+      
+    }
+  
+    .price-container {
+      justify-content: center;
+    }
+  
+    .cta-button {
+      width: 100%;
+      text-align: center;
+      display: block;
+    }
+  
+    .faq-section {
+      padding: 1rem;
+    }
+  }
+  
+  /* Align title and price in the same row */
+  .product-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    /* Adjust spacing */
+    font-family: 'Outfit', sans-serif;
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 1.5rem 0;
+    flex-wrap: wrap;
+    /* Ensures wrapping on smaller screens */
+  }
+  
+  .price-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    /* Space between elements */
+  }
+  
+  .ellipse {
+    width: 30px;
+    /* Adjust size if needed */
+    height: 10px;
+  }
+  
+  .price {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  
+  
+  .question {
+    font-family: Outfit;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -2%;
+  
+  
+  }

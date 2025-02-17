@@ -1,0 +1,193 @@
+/* Background flowers styles */
+.gradient {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(109.6deg, #FFFFFF 0%, #FFEFCC 109.22%);
+    min-height: 80vh;
+    padding: 3rem 1rem;
+}
+
+.bg-flower {
+    position: absolute;
+    z-index: 0;
+    max-width: 15%;
+    height: auto;
+}
+
+.bottom-left {
+    bottom: 0;
+    left: 0;
+}
+
+.top-right {
+    top: 0;
+    right: 0;
+}
+
+/* Content positioning */
+.text-center, .row.g-0 {
+    position: relative;
+    z-index: 1;
+}
+
+/* Base styles */
+h1 {
+    width: 100%;
+    margin-left: 30px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: left;
+    line-height: 1.2;
+}
+
+span {
+    font-family: 'Outfit', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: left;
+    color: #5AA339;
+}
+
+.shop-button {
+    font-family: Outfit, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    width: 204px;
+    padding: 12px 50px;
+    border: 2px solid #5AA339;
+    border-radius: 50px;
+    background-color: #5AA339;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-left: 30px;
+}
+
+.shop-button:hover {
+    background-color: white;
+    color: #5AA339;
+    transform: scale(1.05);
+}
+
+img:not(.bg-flower) {
+    width: 100%;
+    max-width: 318px;
+    height: auto;
+    border-radius: 30px 0px 0px 0px;
+    margin-left: 30px;
+}
+
+p {
+    margin-left: 30px;
+    width: 100%;
+    max-width: 1002px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-align: left;
+    line-height: 1.5;
+}
+
+p span {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: black;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .bg-flower {
+        max-width: 20%;
+    }
+}
+
+@media (max-width: 992px) {
+    h1, span {
+        font-size: 3rem;
+    }
+
+    p, p span {
+        font-size: 1.3rem;
+    }
+
+    .shop-button {
+        font-size: 16px;
+        padding: 10px 30px;
+    }
+
+    img:not(.bg-flower) {
+        max-width: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .row.g-0 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .col-md {
+        padding: 0 15px;
+    }
+
+    .bg-flower {
+        max-width: 25%;
+    }
+    
+    /* h1, span {
+        font-size: 2.5rem;
+        text-align: left;
+        margin-left: 0;
+    } */
+    
+    .shop-button {
+        width: 100% !important;
+        padding: 10px 20px;
+        margin-left: 0;
+    }
+    
+    p, p span {
+        font-size: 1.2rem;
+        text-align: left;
+        margin-left: 0;
+    }
+
+    img:not(.bg-flower) {
+        max-width: 80%;
+        margin-left: 0;
+    }
+
+    .gradient {
+        min-height: auto;
+        padding-bottom: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .bg-flower {
+        max-width: 30%;
+    }
+    
+    h1, span {
+        font-size: 4rem;
+    }
+    
+    .shop-button {
+        font-size: 14px;
+        padding: 8px 15px;
+        width: 100% !important;
+        
+    }
+    
+    p, p span {
+        font-size: 1rem;
+        margin-left: 20px;
+    }
+    
+    img:not(.bg-flower) {
+        max-width: 90%;
+    }
+}

@@ -5,10 +5,8 @@ import { HeroComponent } from './hero/hero.component';
 import { Section1Component } from './section1/section1.component';
 import { Section2Component } from './section2/section2.component';
 import { Section3Component } from './section3/section3.component';
-
-import { SharedModule } from '../shared/shared.module'; // Import SharedModule
+import { SharedModule } from '../shared/shared.module'; 
 import { RouterModule, Routes } from '@angular/router';
-
 
 const routes: Routes = [
   { path: '', component: Product1Component }
@@ -21,15 +19,12 @@ const routes: Routes = [
     Section1Component,
     Section2Component,
     Section3Component
- 
   ],
   imports: [
     CommonModule,
-    SharedModule, // Shared module added
+    SharedModule, // Now gets the directive from SharedModule
     RouterModule.forChild(routes)
   ],
-  exports: [
-    Product1Component 
-  ]
+  exports: [Product1Component]
 })
 export class Product1Module { }

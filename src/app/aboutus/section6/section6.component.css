@@ -1,8 +1,9 @@
 .custom-row {
-    height: 411px;
+    height: auto;
     width: 100vw;
     margin: 0;
-    padding-left: 1%;
+    padding: 50px;
+
 }
 
 .container-fluid {

@@ -18,4 +18,12 @@ export class HeroComponent {
     }
     this.isPlaying = !this.isPlaying;
   }
+  scrollToNextSection(event: Event) {
+    event.preventDefault(); // Prevent default anchor behavior
+
+    const nextSection = document.getElementById('nextSection');
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }

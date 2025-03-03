@@ -8,7 +8,6 @@ import { Section3Component } from './section3/section3.component';
 import { SharedModule } from '../shared/shared.module'; 
 import { RouterModule, Routes } from '@angular/router';
 
-// Define routes for QuestionsModule
 const routes: Routes = [
   { path: '', component: Product2Component }
 ];
@@ -23,11 +22,9 @@ const routes: Routes = [
   ],
   imports: [
     CommonModule,
-    SharedModule, 
-    RouterModule.forChild(routes) // Use forChild for feature modules
+    SharedModule, // Now gets the directive from SharedModule
+    RouterModule.forChild(routes)
   ],
-  exports: [
-    Product2Component 
-  ]
+  exports: [Product2Component]
 })
 export class Product2Module { }

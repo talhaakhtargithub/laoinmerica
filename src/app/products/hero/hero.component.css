@@ -105,11 +105,14 @@ p {
 .rotate-image {
     animation: rotate 15s infinite linear;
     position: absolute;
+    z-index: 5;
 }
 
 .front-image {
     position: relative;
+    transform: translateY(60px);
     z-index: 10;
+   
 }
 
 .right-image {
@@ -176,11 +179,10 @@ p {
 .bg-flower.blur {
     position: absolute;
     width: 20%;
-    opacity: 0.5;
     animation: float 6s infinite ease-in-out;
 }
 
-.floating1 { top: 10%; left: 15%; animation-delay: 1s; }
+.floating1 { top: 10%; left: 45%; animation-delay: 1s; }
 .floating2 { left: 0%;  top:40%; animation-delay: 1.5s; }
 .floating3 { bottom: -1%; left: 30%; animation-delay: 3s; }
 

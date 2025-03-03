@@ -1,57 +1,115 @@
+<!-- section.component.html -->
 <div class="custom-section">
-  <div class="row">
+    <div class="row">
       <!-- Form Section -->
       <div class="col-md-8" data-aos="fade-right">
-          <form id="contactForm" novalidate>
-              <!-- Name & Phone Row -->
-              <div class="row">
-                  <div class="col-md-6 col-12">
-                      <label for="name" class="form-label">Name</label>
-                      <input type="text" class="form-control transparent-input" id="name" placeholder="Enter your name" required>
-                      <div class="invalid-feedback">Please enter your name.</div>
-                  </div>
-                  <div class="col-md-6 col-12">
-                      <label for="phone" class="form-label">Phone</label>
-                      <input type="tel" class="form-control transparent-input" id="phone" placeholder="Enter your phone number" required pattern="^\+?[0-9\s\-]+$">
-                      <div class="invalid-feedback">Please enter a valid phone number.</div>
-                  </div>
+        <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" novalidate>
+          <!-- Name & Phone Row -->
+          <div class="row">
+            <div class="col-md-6 col-12">
+              <label for="name" class="form-label">Name</label>
+              <input
+                type="text"
+                class="form-control transparent-input"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                [(ngModel)]="formData.name"
+                required>
+              <div *ngIf="contactForm.submitted && contactForm.controls['name']?.invalid" class="invalid-feedback">
+                Please enter your name.
               </div>
-
-              <!-- Email & Subject Row -->
-              <div class="row">
-                  <div class="col-md-6 col-12">
-                      <label for="email" class="form-label">Email</label>
-                      <input type="email" class="form-control transparent-input" id="email" placeholder="Enter your email" required>
-                      <div class="invalid-feedback">Please enter a valid email address.</div>
-                  </div>
-                  <div class="col-md-6 col-12">
-                      <label for="subject" class="form-label">Subject</label>
-                      <input type="text" class="form-control transparent-input" id="subject" placeholder="Enter the subject" required>
-                      <div class="invalid-feedback">Please enter a subject.</div>
-                  </div>
+            </div>
+            <div class="col-md-6 col-12">
+              <label for="phone" class="form-label">Phone</label>
+              <input
+                type="tel"
+                class="form-control transparent-input"
+                id="phone"
+                name="phone"
+                placeholder="Enter your phone number"
+                [(ngModel)]="formData.phone"
+                required
+                pattern="^\+?[0-9\s\-]+$">
+              <div *ngIf="contactForm.submitted && contactForm.controls['phone']?.invalid" class="invalid-feedback">
+                Please enter a valid phone number.
               </div>
-
-              <!-- Message Row -->
-              <div class="row">
-                  <div class="col-12">
-                      <label for="message" class="form-label">Message</label>
-                      <textarea class="form-control transparent-input" id="message" rows="4" placeholder="Enter your message" required></textarea>
-                      <div class="invalid-feedback">Please enter your message.</div>
-                  </div>
+            </div>
+          </div>
+  
+          <!-- Email & Subject Row -->
+          <div class="row">
+            <div class="col-md-6 col-12">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control transparent-input"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                [(ngModel)]="formData.email"
+                required>
+              <div *ngIf="contactForm.submitted && contactForm.controls['email']?.invalid" class="invalid-feedback">
+                Please enter a valid email address.
               </div>
-
-              <br>
-              <div class="row">
-                  <div class="col-12 text-center">
-                      <button type="submit" class="send-button">Send Message</button>
-                  </div>
+            </div>
+            <div class="col-md-6 col-12">
+              <label for="subject" class="form-label">Subject</label>
+              <input
+                type="text"
+                class="form-control transparent-input"
+                id="subject"
+                name="subject"
+                placeholder="Enter the subject"
+                [(ngModel)]="formData.subject"
+                required>
+              <div *ngIf="contactForm.submitted && contactForm.controls['subject']?.invalid" class="invalid-feedback">
+                Please enter a subject.
               </div>
-          </form>
+            </div>
+          </div>
+  
+          <!-- Message Row -->
+          <div class="row">
+            <div class="col-12">
+              <label for="message" class="form-label">Message</label>
+              <textarea
+                class="form-control transparent-input"
+                id="message"
+                name="message"
+                rows="4"
+                placeholder="Enter your message"
+                [(ngModel)]="formData.message"
+                required></textarea>
+              <div *ngIf="contactForm.submitted && contactForm.controls['message']?.invalid" class="invalid-feedback">
+                Please enter your message.
+              </div>
+            </div>
+          </div>
+  
+          <br>
+          <div class="row">
+            <div class="col-12 text-center">
+              <button type="submit" class="send-button" [disabled]="isSubmitting">
+                {{ isSubmitting ? 'Sending...' : 'Send Message' }}
+              </button>
+            </div>
+          </div>
+  
+          <!-- Success/Error Messages -->
+          <div *ngIf="isSuccess" class="alert alert-success mt-3">
+            Your message has been sent successfully!
+          </div>
+          <div *ngIf="errorMessage" class="alert alert-danger mt-3">
+            {{ errorMessage }}
+          </div>
+        </form>
       </div>
-
+  
       <!-- Image Section -->
       <div class="col-md-4 col-12 d-flex align-items-center justify-content-center" data-aos="fade-left">
-          <img src="assets/contacts.webp" alt="Contact image" class="img-fluid">
+        <img src="assets/contacts.webp" alt="Contact image" class="img-fluid">
       </div>
+    </div>
   </div>
-</div>
+  

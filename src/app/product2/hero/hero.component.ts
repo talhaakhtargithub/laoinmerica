@@ -12,7 +12,19 @@ export class HeroComponent {
     { question: 'Health Benefits', answer: 'Yes, all our spices are gluten-free.', showAnswer: false },
   ];
 
+  showModal: boolean = false;
+  selectedImage: string = '';
+
   toggleAnswer(question: any) {
     question.showAnswer = !question.showAnswer;
+  }
+
+  openModal(imageSrc: string) {
+    this.selectedImage = imageSrc;
+    this.showModal = true;
+  }
+
+  closeModal() {
+    this.showModal = false;
   }
 }

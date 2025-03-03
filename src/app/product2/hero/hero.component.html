@@ -3,15 +3,16 @@
       <!-- Product Images Column -->
       <div class="col-lg-6">
         <div class="main-image-container">
-          <img src="assets/product2.webp" alt="Main product view" class="main-image">
+          <img src="assets/product2.webp" alt="Main product view" class="main-image" appMagnifier>
         </div>
         <div class="thumbnail-row">
-          <img src="assets/product21.webp" alt="Product detail 1" class="thumbnail">
-          <img src="assets/product22.webp" alt="Product detail 2" class="thumbnail">
-          <img src="assets/product23.webp" alt="Product detail 3" class="thumbnail">
+          <img src="assets/product21.webp" alt="Product detail 1" class="thumbnail" (click)="openModal('assets/product21.webp')">
+          <img src="assets/product22.webp" alt="Product detail 2" class="thumbnail" (click)="openModal('assets/product22.webp')">
+          <img src="assets/product23.webp" alt="Product detail 3" class="thumbnail" (click)="openModal('assets/product23.webp')">
         </div>
+        
         <div class="secondary-image-container">
-          <img src="assets/product24.webp" alt="Product in use" class="secondary-image">
+          <img src="assets/product24.webp" alt="Product in use" class="secondary-image" appMagnifier>
         </div>
       </div>
   
@@ -70,3 +71,10 @@
       </div>
     </div>
   </div>
+  <div *ngIf="showModal" class="modal-overlay">
+    <div class="modal-content">
+      <span class="close-button" (click)="closeModal()">×</span>
+      <img [src]="selectedImage" class="modal-image">
+    </div>
+  </div>
+  

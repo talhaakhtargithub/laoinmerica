@@ -1,33 +1,56 @@
-<div class="custom-section d-flex justify-content-center p-5">
-  <div class="row w-100 custom-row">
-      <!-- First Block -->
-      <div class="col-12 col-md-4 d-flex align-items-center mb-3" data-aos="fade-up">
-          <img src="assets/section1.webp" alt="Section Image" class="img-fluid mr-3">
-          <div class="text-content ms-3">
-              <h4>Houston Food</h4>
-              <h4>Department Approved</h4>
-              <p>Certified for quality and safety, ensuring you enjoy every bite with confidence.</p>
-          </div>
-      </div>
+<div class="gradient" id="nextSection">
+    <div class="row">
+        <div class="col-12 col-md-3 d-flex align-items-stretch">
+            <img class="img-fluid fade-in" src="assets/leaves.webp" alt="Leaves">
+        </div>
+        <div class="col-12 col-md d-flex align-items-center">
+            <div>
+                <h1 class="fade-in">Explore Our Signature Products</h1>
+                <!-- <p class="fade-in">20 Products</p> -->
+            </div>
+        </div>
+    </div>
 
-      <!-- Second Block -->
-      <div class="col-12 col-md-4 d-flex align-items-center mb-3" data-aos="fade-up" data-aos-delay="200">
-          <img src="assets/tic.webp" alt="Section Image" class="img-fluid mr-3">
-          <div class="text-content ms-3">
-              <h4>Authentic Laotian</h4>
-              <h4>Flavors</h4>
-              <p>Experience bold, genuine tastes straight from Laos, crafted with passion.</p>
-          </div>
-      </div>
+    <div class="row">
+        <div class="col-12 col-md-3 ">
+            <h4 class="fade-in ">Crafted </h4>
+            <h4 class="fade-in"> with <span>Care</span></h4>
+            <img src="assets/mask1.webp" alt="Mask" class="mask-img fade-in">
+        </div>
+        
+        <div class="col-12 col-md-3 d-flex align-items-stretch">
+          
+            <a [routerLink]="'/product2'"  class="no-style">
+                <div class="image-fluid">
+                    <img src="assets/section5.webp" alt="Roasted Rice with Spices" class="img-fluid1 fade-in">
+                    <h2 class="fade-in">Roasted Rice with Spices</h2>
+                    <h3 class="fade-in">Specialty</h3>
+                </div>
+            </a>
+            
+          
+        </div>
+        <div class="col-12 col-md-3 d-flex align-items-stretch">
+            <a [routerLink]="'/product1'" class="no-style">
+                <div class="image-fluid">
+                    <img src="assets/section51.webp" alt="Sugar Cane Molasses" class="img-fluid1 fade-in">
+                    <h2 class="fade-in">Sugar Cane Molasses</h2>
+                    <h3 class="fade-in">Specialty</h3>
+                </div>
+            </a>
+            
+        </div>
+        <div class="col-12 col-md-3 d-flex align-items-stretch">
+            <div class="image-fluid1">
+                <div class="follow-us fade-in">
+                    <h5>Follow Us</h5>
+                    <h5>now to get</h5>
+                    <h4>10% OFF</h4>
+                    <a class="shop-button" href="#" (click)="scrollToNextSection($event)">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+   
 
-      <!-- Third Block -->
-      <div class="col-12 col-md-4 d-flex align-items-center mb-3" data-aos="fade-up" data-aos-delay="400">
-          <img src="assets/love.webp" alt="Section Image" class="img-fluid mr-3">
-          <div class="text-content ms-3">
-              <h4>Small Business,</h4>
-              <h4>Big <span>Heart</span></h4>
-              <p>Every purchase supports a passionate, community-driven business.</p>
-          </div>
-      </div>
-  </div>
 </div>

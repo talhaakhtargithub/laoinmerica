@@ -6,6 +6,8 @@ import { SectionComponent } from './section/section.component';
 
 import { SharedModule } from '../shared/shared.module'; // Import SharedModule
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 const routes: Routes = [
@@ -22,7 +24,10 @@ const routes: Routes = [
   imports: [
     CommonModule,
     SharedModule, // Shared module added
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    FormsModule,
+    HttpClientModule
+
   ],
   exports: [
     ContactsComponent 
